@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faCode, faServer, faDatabase } from '@fortawesome/free-solid-svg-icons';
-
 import './Services.css';
 
 const Services = () => (

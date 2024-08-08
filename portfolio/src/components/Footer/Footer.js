@@ -11,16 +11,16 @@ const Footer = () => (
       </div>
       <div className="footer-links">
         <a href="mailto:saikumardev018@gmail.com" className="footer-link">
-          <FaEnvelope size={20} /> Email
+          <FaEnvelope size={24} /> Email
         </a>
         <a href="https://github.com/saikindigeri" target="_blank" rel="noopener noreferrer" className="footer-link">
-          <FaGithub size={20} /> GitHub
+          <FaGithub size={24} /> GitHub
         </a>
         <a href="https://linkedin.com/in/saikumarkindigeri" target="_blank" rel="noopener noreferrer" className="footer-link">
-          <FaLinkedin size={20} /> LinkedIn
+          <FaLinkedin size={24} /> LinkedIn
         </a>
         <a href="https://twitter.com/SKindigeri" target="_blank" rel="noopener noreferrer" className="footer-link">
-          <FaTwitter size={20} /> Twitter
+          <FaTwitter size={24} /> Twitter
         </a>
       </div>
     </div>

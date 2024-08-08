@@ -91,11 +91,10 @@
         github: 'https://github.com/saikindigeri/coviddash.git'
       },
   ];
-  
   const Projects = () => {
     const containerRef = useRef(null);
     const [isPaused, setIsPaused] = useState(false);
-    const [scrollSpeed, setScrollSpeed] = useState(4); // Initial scroll speed
+    const [scrollSpeed, setScrollSpeed] = useState(4);
   
     useEffect(() => {
       let scrollInterval;
@@ -108,7 +107,7 @@
               containerRef.current.scrollLeft = 0; // Reset scroll position
             }
           }
-        }, 20); // Adjust the interval for smoother or faster scrolling
+        }, 20);
       }
   
       return () => clearInterval(scrollInterval);
@@ -122,15 +121,14 @@
         const scrollPercentage = (clientX / window.innerWidth) * maxScrollLeft;
   
         containerRef.current.scrollLeft = scrollPercentage;
-        setIsPaused(true); // Pause automatic scrolling when user interacts
+        setIsPaused(true);
   
-        // Increase speed based on mouse position
-        setScrollSpeed(2 + (scrollPercentage / maxScrollLeft) * 2); // Adjust speed range as needed
+        setScrollSpeed(2 + (scrollPercentage / maxScrollLeft) * 2);
       }
     };
   
     const handleMouseLeave = () => {
-      setIsPaused(false); // Resume scrolling when mouse leaves
+      setIsPaused(false);
     };
   
     return (
@@ -147,7 +145,7 @@
               <Card className="project-card">
                 <Card.Img variant="top" src={project.image} className="project-image" />
                 <Card.Body>
-                <Card.Header className="project-des">
+                  <Card.Header className="project-des">
                     {project.title}
                   </Card.Header>
                   <Card.Text className="project-description">
@@ -178,4 +176,3 @@
   };
   
   export default Projects;
-  

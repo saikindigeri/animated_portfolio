@@ -1,35 +1,23 @@
 import React from 'react';
 import './Home.css';
-import { Button } from 'react-bootstrap';
-import { FaArrowDown } from 'react-icons/fa';
-import { Link } from 'react-scroll';
 
-const Home = () => (
-  <section id="Home" className="home-section text-center">
-     <h1 className="home-title ">Welcome to My Portfolio</h1>
-    <div className="home-content text-center">
-     
-      <h1 className="home-subtitle">I'm Sai Kumar Kindigeri, a Creative Web Developer</h1>
-      <p className="home-description">
-        With a strong passion for web development, I specialize in building interactive <br /> and responsive web applications.
-        My journey spans across technologies like React, <br />Node.js, and more, crafting solutions that bring ideas to life.
-        Let's create something extraordinary together.
-      </p>
-      <Button variant="primary" href="#Contact" className="home-button">
-        Connect with Me
-      </Button>
-     
-       
-        <Link 
-          to="About" 
-          smooth={true} 
-          duration={1000} 
-          className="scroll-down"
-        >
-          <FaArrowDown size={30} />
-        </Link>
-    </div>
-  </section>
-);
+const Home = () => {
+  return (
+    <section id="Home" className="home-section">
+      <div className="home-container">
+        <div className="text-container">
+          <h1 className="animated-title">Sai Kumar Kindigeri</h1>
+          <p className="animated-subtitle">BSc MPCS Graduate | Full Stack Developer</p>
+          <a href="c:\Users\saiku\OneDrive\Desktop\saikumark.resume.pdf" download="Sai_Kumar_Resume" className="resume-button">
+            Download Resume
+          </a>
+        </div>
+        <div className="profile-image-container">
+          <img src="https://res.cloudinary.com/dyjmh036b/image/upload/v1723150832/blue_sai_up1sy1.jpg" alt="Sai Kumar Kindigeri" className="profile-image" />
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Home;

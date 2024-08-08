@@ -1,172 +1,76 @@
-.services-section {
-    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-    padding: 60px 0;
-    color: #333;
-    position: relative;
-    overflow: hidden;
-    text-align: center; /* Center align text */
-    animation: backgroundAnimation 10s infinite alternate;
-  }
-  
-  .services-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    font-weight: bold;
-    color: #00796b;
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    position: relative;
-    animation: fadeIn 2s ease-out, pulseAnimation 2s infinite;
-    
-  }
-  
-  .services-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 3px;
-    background: #00796b;
-    margin: 10px auto;
-    transition: width 0.3s ease;
-    animation: lineExpand 1s ease-in-out;
-  }
-  
-  .service-card {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: scaleIn 0.6s ease-in-out;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
 
-  .service-card p{
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
+.services-section {
+  font-family: 'Arial', sans-serif; /* Ensuring Arial font */
+  padding: 60px 20px;
+  background-color: #282c34; /* Dark background for high contrast */
+}
+
+.services-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #ffffff; /* Bright cyan color for title */
+}
+
+.service-card {
+  transition: transform 0.8s, box-shadow 0.4s, background-color 0.4s;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+  border: none;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #ffffff; /* White background for cards */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #863420, #551b1b); /* Vibrant gradient */
+  opacity: 0.3;
+  transition: opacity 0.4s;
+  z-index: 0;
+}
+
+.service-card:hover {
+  transform: rotateY(15deg) rotateX(15deg) scale(1.1); /* Heavy 3D effect */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff; /* White background on hover */
+}
+
+.service-card:hover::before {
+  opacity: 0.5; /* More intense gradient on hover */
+}
+
+.service-icon {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #320c01; /* Bright orange for icons */
+  z-index: 1;
+}
+
+.service-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #110906; /* Matching title color with icons */
+  z-index: 1;
+}
+
+.service-card p {
+  color: #141313; /* Dark grey for text */
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .service-card {
+    margin: 10px;
   }
-  
-  .service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-  
-  .service-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-    animation: iconAnimate 0.6s ease-in-out;
-  }
-  
-  .service-card:hover .service-icon {
-    transform: scale(1.2);
-    color: #00796b;
-  }
-  
-  .service-title {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #00796b;
-    font-weight: bold;
-    animation: fadeInTitle 1s ease-in-out;
-  }
-  
-  .service-card p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .service-card:hover p {
-    color: #00796b;
-    transform: translateY(-5px);
-  }
-  
-  @keyframes backgroundAnimation {
-    0% {
-      background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-    }
-    100% {
-      background: linear-gradient(135deg, #b2ebf2, #e0f7fa);
-    }
-  }
-  
-  @keyframes scaleIn {
-    from {
-      transform: scale(0.9);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes titleAnimate {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes lineExpand {
-    from {
-      width: 0;
-    }
-    to {
-      width: 80px;
-    }
-  }
-  
-  @keyframes iconAnimate {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes fadeInTitle {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Center align cards within the row */
-  .row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .col-md-3 {
-    display: flex;
-    justify-content: center;
-  }
-  @keyframes pulseAnimation {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
+}

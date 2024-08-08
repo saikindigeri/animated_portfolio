@@ -48,76 +48,80 @@ const Contact = () => {
 
   return (
     <section id="Contact" className="contact-section">
+      <h2 className="contact-title">CONTACT ME</h2>
       <div className="contact-container">
-        <h2 className="contact-title">CONTACT ME</h2>
-        <Form onSubmit={handleSubmit} className="contact-form">
-          <Form.Group controlId="formName" className="form-group">
-            <Form.Control
-              type="text"
-              placeholder="Your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              className="form-control"
-            />
-          </Form.Group>
-          <Form.Group controlId="formEmail" className="form-group">
-            <Form.Control
-              type="email"
-              placeholder="Your Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="form-control"
-            />
-          </Form.Group>
-          <Form.Group controlId="formPhone" className="form-group">
-            <Form.Control
-              type="text"
-              placeholder="Your Phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-              className="form-control"
-            />
-          </Form.Group>
-          <Form.Group controlId="formMessage" className="form-group">
-            <Form.Control
-              as="textarea"
-              rows={3}
-              placeholder="Your Message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-              className="form-control"
-            />
-          </Form.Group>
-          {error && <Alert variant="danger" className="error-alert">{error}</Alert>}
-          {success && <Alert variant="success" className="success-alert">{success}</Alert>}
-          <Button variant="primary" type="submit" className="submit-button">
-           <GrSend size={30}/>
-          </Button>
-        </Form>
-
-        {/* Modal for Thank You message */}
-        <Modal
-          show={showModal}
-          onHide={() => setShowModal(false)}
-          centered
-          className="thank-you-modal"
-        >
-          <Modal.Header closeButton>
-            <Modal.Title>Thank You!</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <p>{success}</p>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={() => setShowModal(false)}>
-              Close
+      
+        <div className="contact-form card-3d">
+         
+          <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="formName" className="form-group">
+              <Form.Control
+                type="text"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className="form-control"
+              />
+            </Form.Group>
+            <Form.Group controlId="formEmail" className="form-group">
+              <Form.Control
+                type="email"
+                placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="form-control"
+              />
+            </Form.Group>
+            <Form.Group controlId="formPhone" className="form-group">
+              <Form.Control
+                type="text"
+                placeholder="Your Phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+                className="form-control"
+              />
+            </Form.Group>
+            <Form.Group controlId="formMessage" className="form-group">
+              <Form.Control
+                as="textarea"
+                rows={3}
+                placeholder="Your Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+                className="form-control"
+              />
+            </Form.Group>
+            {error && <Alert variant="danger" className="error-alert">{error}</Alert>}
+            {success && <Alert variant="success" className="success-alert">{success}</Alert>}
+            <Button variant="primary" type="submit" className="submit-button">
+              <GrSend size={30} />
             </Button>
-          </Modal.Footer>
-        </Modal>
+          </Form>
+
+          {/* Modal for Thank You message */}
+          <Modal
+            show={showModal}
+            onHide={() => setShowModal(false)}
+            centered
+            className="thank-you-modal"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title>Thank You!</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <p>{success}</p>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={() => setShowModal(false)}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </div>
       </div>
     </section>
   );

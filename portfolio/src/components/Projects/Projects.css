@@ -1,122 +1,91 @@
+/* Projects.css */
+
 .projects-section {
-    padding: 50px 0;
-    text-align: center;
-    background-color: #f0f9ff; /* Light sky blue background */
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .projects-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    ;
-    color: #333;
-    position: relative;
-    display: inline-block;
-    animation: fadeIn 2s ease-out, pulseAnimation 2s infinite;
-  }
-  
-  .projects-title::after {
-    content: '';
-    display: block;
-    width: 70px;
-    height: 4px;
-    background: #17a2b8;
-    margin: 10px auto;
-  }
-  
-  .projects-container {
-    display: flex;
-    align-items: center;
-    overflow-x: hidden; /* Hide scrollbar */
-    white-space: nowrap;
-    position: relative;
-    padding: 10px 0;
-  }
-  
-  .project-card-wrapper {
-    display: inline-block;
-    margin-right: 20px;
-    transform: rotate(-3deg); /* Slant effect */
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .project-card-wrapper:hover {
-    transform: rotate(0deg); /* Remove slant on hover */
-  }
-  
-  .project-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    width: 400px;
-    border-radius: 10px;
+  padding: 60px 20px;
+  background-color: #201515; /* Simple background color */
+  font-family: Arial, sans-serif; /* Use Arial font */
+}
 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  .project-card:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-  }
-  
-  .project-image {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .project-description {
-    font-size:15px;
-    margin: 10px 0;
+.projects-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
 
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
+.projects-container {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+  perspective: 1000px; /* For 3D effect */
+}
 
-  .project-des {
-    font-size:20px;
-    margin: 10px 0;
-background-color: rgb(0, 78, 74);
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .project-tech {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .project-buttons {
-    margin-top: 10px;
-  }
-  
-  .project-buttons .btn {
-    margin: 0 5px;
-  }
-  .tech-icon{
-    margin-right: 20px;
-  }
-  /* Hide the scrollbar for all browsers */
-  .projects-container::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .projects-container {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-  @keyframes pulseAnimation {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
+.project-card-wrapper {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-card-wrapper:hover {
+  transform: rotateY(15deg) scale(1.05); /* 3D rotation effect on hover */
+}
+
+.project-card {
+  width: 300px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  background: #fff; /* Card background color */
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  height: 60%;
+  object-fit: cover;
+}
+
+.project-des {
+  font-size: 1.2rem;
+  color: #007bff; /* Simple color for project title */
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tech-icons {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.tech-icon {
+  font-size: 1.5rem;
+  margin: 0 5px;
+  color: #333; /* Simple color for tech icons */
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-buttons a {
+  color: #fff; /* Button text color */
+}
+
+.project-buttons .btn-primary {
+  background-color: #007bff; /* Simple button color */
+  border: none;
+}
+
+.project-buttons .btn-secondary {
+  background-color: #6c757d; /* Simple button color */
+  border: none;
+}
