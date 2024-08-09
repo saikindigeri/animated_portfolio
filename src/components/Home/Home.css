@@ -1,0 +1,124 @@
+/* Home.css */
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, black); /* Gradient background */
+  overflow: hidden;
+  perspective: 1200px; /* Increased perspective for more depth */
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  perspective: 1200px; /* Perspective for 3D effect */
+  animation: cardSlide 3s ease-out infinite; /* 3D slide animation */
+}
+
+.profile-image-container {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  position: relative;
+  animation: imageFloat 5s ease-in-out infinite; /* Floating effect */
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: transform 2s ease-in-out, filter 2s ease-in-out;
+  animation: imageTransform 5s infinite alternate; /* 3D transformation */
+}
+
+.text-container {
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-title {
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.profile-subtitle {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.resume-button {
+  font-family: Arial, sans-serif;
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  color: #fff;
+  background: #e74c3c;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.resume-button:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Keyframes for 3D card slide */
+@keyframes cardSlide {
+  0% {
+    transform: translateZ(0) rotateY(0);
+  }
+  50% {
+    transform: translateZ(50px) rotateY(10deg);
+  }
+  100% {
+    transform: translateZ(0) rotateY(0);
+  }
+}
+
+/* Keyframes for image floating effect */
+@keyframes imageFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for 3D image transformation */
+@keyframes imageTransform {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+  }
+  100% {
+    transform: rotateX(15deg) rotateY(15deg) scale(1.1);
+  }
+}

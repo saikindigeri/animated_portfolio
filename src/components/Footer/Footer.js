@@ -1,0 +1,33 @@
+import React from 'react';
+import './Footer.css';
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+
+const Footer = () => (
+  <footer className="footer-section">
+    <div className="footer-content">
+      <div className="footer-info">
+        <h3 className="footer-title">Connect With Me</h3>
+        <p className="footer-text">Feel free to reach out through the following channels:</p>
+      </div>
+      <div className="footer-links">
+        <a href="mailto:saikumardev018@gmail.com" className="footer-link">
+          <FaEnvelope size={24} /> Email
+        </a>
+        <a href="https://github.com/saikindigeri" target="_blank" rel="noopener noreferrer" className="footer-link">
+          <FaGithub size={24} /> GitHub
+        </a>
+        <a href="https://linkedin.com/in/saikumarkindigeri" target="_blank" rel="noopener noreferrer" className="footer-link">
+          <FaLinkedin size={24} /> LinkedIn
+        </a>
+        <a href="https://twitter.com/SKindigeri" target="_blank" rel="noopener noreferrer" className="footer-link">
+          <FaTwitter size={24} /> Twitter
+        </a>
+      </div>
+    </div>
+    <div className="footer-bottom">
+      <p>&copy; 2024 Sai Kumar Kindigeri. All rights reserved.</p>
+    </div>
+  </footer>
+);
+
+export default Footer;

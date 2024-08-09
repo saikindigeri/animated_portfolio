@@ -1,0 +1,74 @@
+.skills-section {
+  padding: 80px 20px;
+  background: #222222; /* Dark background for contrast */
+  color: white;
+  text-align: center;
+  perspective: 1200px; /* Depth for 3D effects */
+}
+
+.skills-heading {
+  font-size: 3.5rem;
+  margin-bottom: 60px;
+  color: #ffffff; /* Teal color for heading */
+  position: relative;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+@keyframes pulse {
+  from {
+    text-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(0, 188, 212, 1), 0 0 40px rgba(0, 188, 212, 0.7);
+  }
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  transform-style: preserve-3d;
+}
+
+.skill-item {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, orange, red); /* Gradient from pink to purple */
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.8s ease, box-shadow 0.8s ease, background 0.8s ease;
+  transform: rotateX(0deg) rotateY(0deg) translateZ(0px);
+  position: relative;
+}
+
+.skill-item:hover {
+  transform: rotateX(20deg) rotateY(20deg) translateZ(60px); /* Extreme 3D rotation */
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(135deg, #060505, #ab47bc); /* Lighter gradient on hover */
+}
+
+.skill-icon {
+  font-size: 4rem;
+  color: white;
+  transition: transform 0.8s ease, color 0.8s ease;
+  transform: translateZ(30px); /* 3D effect for icon */
+}
+
+.skill-name {
+  font-size: 1.75rem;
+  margin-top: 15px;
+  color: white;
+  transform: translateZ(30px); /* 3D effect for name */
+}
+
+.skill-item:hover .skill-icon, .skill-item:hover .skill-name {
+  color: #f06292; /* Change color on hover */
+  transform: translateZ(80px); /* Enhance 3D effect on hover */
+}
