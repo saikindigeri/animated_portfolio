@@ -36,7 +36,7 @@
 .skill-item {
   width: 200px;
   height: 200px;
-  background: linear-gradient(135deg, #e91e63, #9c27b0); /* Gradient from pink to purple */
+  background: linear-gradient(135deg, orange, red); /* Gradient from pink to purple */
   border-radius: 15px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   display: flex;

@@ -8,9 +8,9 @@ const Header = () => {
     <header className="header">
         <h3  href="#Home" className='logo' >
            SAI DEVA  </h3>
-      <Navbar expand="lg" className="navbar-custom">
+      <Navbar expand="lg" className="navbar-custom ">
        
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className='mobile'/>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Item>

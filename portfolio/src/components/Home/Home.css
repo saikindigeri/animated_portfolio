@@ -4,10 +4,9 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #1a1a1a, #333); /* Gradient background */
+  background: linear-gradient(135deg, black); /* Gradient background */
   overflow: hidden;
   perspective: 1200px; /* Increased perspective for more depth */
-  position: relative;
 }
 
 .home-container {
@@ -18,37 +17,65 @@
   text-align: center;
 }
 
-.text-container {
-  margin-bottom: 30px;
+.profile-card {
   position: relative;
+  width: 300px;
+  height: 400px;
+  perspective: 1200px; /* Perspective for 3D effect */
+  animation: cardSlide 3s ease-out infinite; /* 3D slide animation */
 }
 
-.animated-title {
-  font-family: Arial, Helvetica, sans-serif; /* Arial font */
-  font-size: 4rem;
-  color: #fff;
-  display: inline-block;
-  position: relative;
+.profile-image-container {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  white-space: nowrap;
-  animation: textRotate 5s ease-out forwards; /* 3D rotate animation */
-  
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  position: relative;
+  animation: imageFloat 5s ease-in-out infinite; /* Floating effect */
 }
 
-.animated-subtitle {
-  font-family: Arial, Helvetica, sans-serif; /* Arial font */
-  font-size: 1.5rem;
-  color: #ddd;
-  margin: 15px 0;
-  animation: textFadeIn 5s 2s ease-out forwards; /* Fade-in animation with delay */
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: transform 2s ease-in-out, filter 2s ease-in-out;
+  animation: imageTransform 5s infinite alternate; /* 3D transformation */
+}
+
+.text-container {
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-title {
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.profile-subtitle {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
 }
 
 .resume-button {
-  font-family: Arial, Helvetica, sans-serif; /* Arial font */
+  font-family: Arial, sans-serif;
   font-size: 1.1rem;
   padding: 12px 25px;
   color: #fff;
-  background: #007bff;
+  background: #e74c3c;
   border: none;
   border-radius: 8px;
   text-decoration: none;
@@ -56,61 +83,42 @@
 }
 
 .resume-button:hover {
-  background: #0056b3;
+  background: #c0392b;
   transform: scale(1.05);
 }
 
-/* Profile image styles */
-.profile-image-container {
-  perspective: 1200px; /* Increased perspective for more depth */
-}
-
-.profile-image {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-  filter: grayscale(100%);
-  transition: transform 2s ease-in-out, filter 2s ease-in-out;
-  animation: imageTransform 6s ease-in-out forwards; /* 3D transformation and color transition */
-}
-
-/* Keyframes for 3D text rotation */
-@keyframes textRotate {
+/* Keyframes for 3D card slide */
+@keyframes cardSlide {
   0% {
-    transform: rotateX(90deg) rotateY(90deg) translateZ(-200px);
-    opacity: 0;
+    transform: translateZ(0) rotateY(0);
+  }
+  50% {
+    transform: translateZ(50px) rotateY(10deg);
   }
   100% {
-    transform: rotateX(0) rotateY(0) translateZ(0);
-    opacity: 1;
+    transform: translateZ(0) rotateY(0);
   }
 }
 
-/* Keyframes for text fade-in */
-@keyframes textFadeIn {
+/* Keyframes for image floating effect */
+@keyframes imageFloat {
   0% {
-    opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
   100% {
-    opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Keyframes for image transformation */
+/* Keyframes for 3D image transformation */
 @keyframes imageTransform {
   0% {
-    transform: rotateY(45deg) scale(1.1);
-    filter: grayscale(100%);
-  }
-  50% {
-    transform: rotateY(0deg) scale(1);
-    filter: grayscale(50%);
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
   }
   100% {
-    transform: rotateY(-45deg) scale(1);
-    filter: grayscale(0%);
+    transform: rotateX(15deg) rotateY(15deg) scale(1.1);
   }
 }
