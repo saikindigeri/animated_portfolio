@@ -17,7 +17,7 @@ const skillsData = [
 ];
 
 const Skills = () => (
-  <section id="Skills" className="skills-section">
+  <section id="Skills" className="skills-section text-center">
     <h2 className="skills-heading">My Skills</h2>
     <div className="skills-container">
       {skillsData.map((skill, index) => (

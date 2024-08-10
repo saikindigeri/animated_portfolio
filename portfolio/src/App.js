@@ -8,9 +8,9 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer'
 
 import Header from './components/Header/Header';
-import Portfolio from './components/Portfolio/Portfolio';
 
 import './App.css'
+import Portfolio from './components/Portfolio/Portfolio';
 
 const App = () => {
   return (
@@ -23,7 +23,7 @@ const App = () => {
       <Skills />
       <About />
       <Projects /> 
-      <Portfolio/>
+   <Portfolio/>
       <Contact />
 
   <Footer/>

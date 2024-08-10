@@ -32,9 +32,15 @@
 }
 
 .contact-title {
+  font-size: 2.0rem;
   text-align: center;
   color: #ffffff; /* White text color for title */
   margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  animation: fadeIn 2s ease-out, pulseAnimation 2s infinite;
+font-family:Arial;
 }
 
 .form-group {

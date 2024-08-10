@@ -53,6 +53,7 @@
 .navbar-custom .nav-link::before {
   content: '';
   position: absolute;
+  color: white;
   top: 0;
   left: 0;
   width: 100%;
@@ -67,9 +68,11 @@
 .navbar-custom .nav-link:hover::before {
   transform: scaleX(1); /* Full-width orange background on hover */
 }
-
+.navbar-toggler-icon{
+  color: white;
+}
 .navbar-custom .nav-link:hover {
-  color: #222; /* Dark text color on hover */
+  color:white; /* Dark text color on hover */
   transform: translateY(-4px) scale(1.1); /* Lift and scale effect on hover */
 }
 
