@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header';
 
 import './App.css'
+import Portfolio from './components/Portfolio/Portfolio';
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
       <Skills />
       <About />
       <Projects /> 
-   
+   <Portfolio/>
       <Contact />
 
   <Footer/>
