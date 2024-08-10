@@ -1,124 +1,150 @@
-/* Home.css */
+/* Home Section Styling */
 .home-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, black); /* Gradient background */
-  overflow: hidden;
-  perspective: 1200px; /* Increased perspective for more depth */
+  height: 100vh;
+  background: linear-gradient(135deg, #1c1c1c 30%, #333333 100%);
+  padding: 0 20px;
+  text-align: center;
 }
 
-.home-container {
+.home-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  max-width: 800px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 15px;
+  background: #282828;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  animation: fadeInUp 1s ease-in-out;
 }
 
-.profile-card {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  perspective: 1200px; /* Perspective for 3D effect */
-  animation: cardSlide 3s ease-out infinite; /* 3D slide animation */
+/* Profile Wrapper */
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-image-container {
-  width: 100%;
-  height: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  position: relative;
-  animation: imageFloat 5s ease-in-out infinite; /* Floating effect */
+  width: 300px;
+  height: 300px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.7);
+  transition: transform 0.5s ease-in-out;
+}
+
+.profile-image-container:hover {
+  transform: scale(1.1);
 }
 
 .profile-image {
   width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  filter: brightness(0.9);
-  transition: transform 2s ease-in-out, filter 2s ease-in-out;
-  animation: imageTransform 5s infinite alternate; /* 3D transformation */
+  height: auto;
+  transition: filter 0.3s ease;
 }
 
-.text-container {
-  width: 100%;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+.profile-image:hover {
+  filter: grayscale(0%);
 }
 
-.profile-title {
-  font-family: Arial, sans-serif;
-  font-size: 2rem;
-  color: #2c3e50;
+/* Profile Details */
+.profile-details {
+  color: #f1f1f1;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6600;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 1s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.profile-subtitle {
-  font-family: Arial, sans-serif;
-  font-size: 1rem;
-  color: #7f8c8d;
+.subtitle {
+  font-size: 1.2rem;
+  color: #bbbbbb;
   margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: slideIn 1.2s ease-in-out;
 }
 
 .resume-button {
-  font-family: Arial, sans-serif;
-  font-size: 1.1rem;
-  padding: 12px 25px;
-  color: #fff;
-  background: #e74c3c;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
+  padding: 10px 25px;
+  background: #ff6600;
+  color: black;
+
+  border-radius: 25px;
+  font-size: 1rem;
+
+  font-weight: bold;
   transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  animation: bounceIn 1.5s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+.a{
+  text-decoration: none;
+}
 .resume-button:hover {
-  background: #c0392b;
-  transform: scale(1.05);
+  background: #ff3300;
+  transform: translateY(-5px);
+  cursor: pointer;
 }
 
-/* Keyframes for 3D card slide */
-@keyframes cardSlide {
+/* Animations */
+@keyframes fadeInUp {
   0% {
-    transform: translateZ(0) rotateY(0);
-  }
-  50% {
-    transform: translateZ(50px) rotateY(10deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-    transform: translateZ(0) rotateY(0);
-  }
-}
-
-/* Keyframes for image floating effect */
-@keyframes imageFloat {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Keyframes for 3D image transformation */
-@keyframes imageTransform {
+@keyframes zoomIn {
   0% {
-    transform: rotateX(0deg) rotateY(0deg) scale(1);
+    transform: scale(0.8);
+    opacity: 0;
   }
   100% {
-    transform: rotateX(15deg) rotateY(15deg) scale(1.1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

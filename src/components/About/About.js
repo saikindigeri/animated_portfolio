@@ -3,13 +3,14 @@ import './About.css';
 import { Card } from 'react-bootstrap';
 
 const About = () => (
-  <section id="About" className="about-section">
+  <section id="About" className="about-section text-center">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-8">
+        <h1 className="section-title">About Me</h1>
           <Card className="about-card text-center p-5 my-5">
             <Card.Body>
-              <h1 className="section-title">About Me</h1>
+             
               <div className="about-text">
                 <p>
                   Hi, <strong>I’m Sai Kumar Kindigeri</strong>. I’m a passionate web developer with experience in

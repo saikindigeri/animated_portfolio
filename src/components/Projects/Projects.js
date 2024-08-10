@@ -132,7 +132,7 @@
     };
   
     return (
-      <section id="Projects" className="projects-section">
+      <section id="Projects" className="projects-section text-center">
         <h1 className="projects-title">My Projects</h1>
         <div
           className="projects-container"

@@ -26,13 +26,13 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   margin-bottom: 20px;
   font-weight: bold;
   color: black;
   position: relative;
   display: inline-block;
-  
+  color: white;
   animation: fadeIn 2s ease-out, pulseAnimation 2s infinite;
 font-family:Arial;
 }

@@ -7,10 +7,17 @@
 }
 
 .services-title {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   margin-bottom: 40px;
   text-align: center;
   color: #ffffff; /* Bright cyan color for title */
+  position: relative;
+  display: inline-block;
+  
+  
+  font-weight: bold;
+  animation: fadeIn 2s ease-out, pulseAnimation 2s infinite;
+font-family:Arial;
 }
 
 .service-card {
