@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif; /* Ensure Arial is used across the app */
-  background-color: #000; /* Black background for the whole app */
+  background: #151515;/* Black background for the whole app */
   color: #e0e0e0; /* Light grey text color for readability */
   line-height: 1.6;
   overflow-x: hidden; /* Prevent horizontal scrolling */

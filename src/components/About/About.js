@@ -3,7 +3,7 @@ import './About.css';
 import { Card } from 'react-bootstrap';
 
 const About = () => (
-  <section id="About" className="about-section text-center">
+  <section id="About" className="about-s text-center">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-8">

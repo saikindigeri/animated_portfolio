@@ -7,6 +7,7 @@
   background: linear-gradient(135deg, #1c1c1c 30%, #333333 100%);
   padding: 0 20px;
   text-align: center;
+  background: #151515;
 }
 
 .home-content {
@@ -35,6 +36,7 @@
   border-radius: 50%;
   overflow: hidden;
   width: 300px;
+  background-color: rgb(13, 10, 10);
   height: 300px;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.7);
   transition: transform 0.5s ease-in-out;
@@ -45,9 +47,11 @@
 }
 
 .profile-image {
-  width: 100%;
+  width: 60%;
   height: auto;
+ 
   transition: filter 0.3s ease;
+  background-color: black;
 }
 
 .profile-image:hover {
@@ -66,7 +70,7 @@
   margin-bottom: 10px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   animation: zoomIn 1s ease-in-out;
-  font-family: Arial, Helvetica, sans-serif;
+font-family: 'Courier New', Courier, monospace;
 }
 
 .subtitle {
@@ -83,13 +87,12 @@
   color: black;
 
   border-radius: 25px;
-  font-size: 1rem;
-
+  font-size: 1rem;text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease, transform 0.3s ease;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   animation: bounceIn 1.5s ease-in-out;
-  font-family: Arial, Helvetica, sans-serif;
+ 
 }
 
 .a{
@@ -99,6 +102,7 @@
   background: #ff3300;
   transform: translateY(-5px);
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* Animations */

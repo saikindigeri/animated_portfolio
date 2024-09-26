@@ -1,7 +1,7 @@
 /* Contact.css */
 .contact-section {
   padding: 4rem 2rem;
-  background-color: #1e1e1e; /* Dark grey background for the section */
+  background: #151515; /* Dark grey background for the section */
   color: #e0e0e0; /* Light grey text color */
 }
 
@@ -48,7 +48,7 @@ font-family:Arial;
 }
 
 .form-control {
-  background-color: #1e1e1e; /* Dark grey background for inputs */
+  background-color: #ececec; /* Dark grey background for inputs */
   color: #e0e0e0; /* Light grey text color for inputs */
   border: 1px solid #333; /* Darker border */
   border-radius: 5px;
@@ -57,6 +57,7 @@ font-family:Arial;
 
 .form-control::placeholder {
   color: #666; /* Placeholder text color */
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .submit-button {

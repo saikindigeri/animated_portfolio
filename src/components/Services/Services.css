@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
 
-.services-section {
+.services-s {
   font-family: 'Arial', sans-serif; /* Ensuring Arial font */
   padding: 60px 20px;
-  background-color: #282c34; /* Dark background for high contrast */
+  background: #151515; /* Dark background for high contrast */
 }
 
 .services-title {

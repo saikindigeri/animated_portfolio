@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="header">
         <h3  href="#Home" className='logo' >
-           SAI KUMAR  </h3>
+           @saikumar  </h3>
       <Navbar expand="lg" className="navbar-custom ">
        
         <Navbar.Toggle aria-controls="basic-navbar-nav" style={{color:"white"}} />

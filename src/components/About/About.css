@@ -1,7 +1,8 @@
-.about-section {
-  background-color:black;
+.about-s {
+
   padding: 60px 0;
   color: #333;
+  background: #151515;
   position: relative;
   overflow: hidden;
   animation: fadeIn 1s ease-in-out;
@@ -83,6 +84,7 @@ font-family:Arial;
   font-size: 1.3rem;
   color: #00796b;
   font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
   background: rgba(0, 121, 107, 0.1);
   padding: 5px;
   border-radius: 5px;
@@ -92,7 +94,7 @@ font-family:Arial;
 .timeline-item p {
   color: black;
   font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   margin: 5px 0 0;
 }

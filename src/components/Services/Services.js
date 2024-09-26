@@ -5,7 +5,7 @@ import { faLaptopCode, faCode, faServer, faDatabase } from '@fortawesome/free-so
 import './Services.css';
 
 const Services = () => (
-  <section id="Services" className="services-section text-center" >
+  <section id="Services" className="services-s text-center" >
     <Container>
       <h1 className="services-title">My Services</h1>
       <Row>
